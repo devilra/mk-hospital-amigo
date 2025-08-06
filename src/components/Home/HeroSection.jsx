@@ -33,7 +33,7 @@ const HeroSection = () => {
   }, [location]);
 
   return (
-    <div>
+    <div className="">
       <div className="hidden md:block">
         <section
           className="relative  px-4 md:px-20 h-[800px] md:h-fit py-10 flex flex-col md:flex-row items-center justify-end gap-10 bg-cover bg-center bg-no-repeat"
@@ -83,7 +83,7 @@ const HeroSection = () => {
           </div>
         </section>
       </div>
-      <div className="md:hidden">
+      <div className="md:hidden w-full">
         <div className="slider-container">
           <Slider {...settings}>
             <div className="">

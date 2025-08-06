@@ -37,11 +37,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-4 md:px-20 py-4 bg-white shadow sticky top-0 z-50">
+    <nav className="flex items-center justify-between px-4 md:px-20 py-4 bg-white shadow  z-50">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Link to="/">
-          <img src="/logo.png" alt="Global" className="h-16" />
+          <img src="/logo1.png" alt="RKP" className="h-20 w-[170px]" />
         </Link>
       </div>
 
@@ -75,7 +75,7 @@ const Navbar = () => {
       {/* Call Button (Desktop) */}
       <div className="hidden md:block">
         <button className="bg-blue-900 text-white px-7 font-bold py-4 flex gap-2 justify-center items-center rounded-lg">
-          <IoCall size={20} className="text-white" /> 9941201227
+          <IoCall size={20} className="text-white" /> 9384676002
         </button>
       </div>
 
