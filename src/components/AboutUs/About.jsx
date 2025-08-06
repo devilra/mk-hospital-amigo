@@ -63,7 +63,7 @@ const About = () => {
               About Us
             </h4>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-4">
-              Best Scan Center in <br /> Nanmangalam, Chennai
+              RKPhospitals in <br /> Nanmangalam, Chennai
             </h2>
             <p className="text-gray-700 mb-4 text-sm sm:text-base">
               We are{" "}

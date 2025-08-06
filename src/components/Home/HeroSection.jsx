@@ -4,6 +4,55 @@ import Slider from "react-slick";
 import About from "../AboutUs/About";
 import { useLocation } from "react-router-dom";
 
+const services = [
+  {
+    title: "CT SCAN",
+    price: "₹ 2000",
+    description:
+      "A CT scan (Computed Tomography) is an advanced imaging technique that uses X-rays and computer processing...",
+    img: "/services/s1.jpg",
+  },
+  {
+    title: "LAB FOR BLOOD TESTS",
+    price: "₹ 50",
+    description:
+      "A blood test is a diagnostic tool that analyzes a blood sample to assess overall health, detect diseases, and monitor...",
+    img: "/services/s2.jpg",
+  },
+  {
+    title: "ULTRA SOUND",
+    price: "₹ 1000",
+    description:
+      "An ultrasound is a diagnostic tool that uses sound waves to create images of internal organs, helping assess...",
+    img: "/services/s3.jpg",
+  },
+];
+
+const Coresettings = {
+  dots: true,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 3, // default desktop
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+  responsive: [
+    {
+      breakpoint: 1024, // below 1024px
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 640, // below 640px (mobile)
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
+
 const settings = {
   fade: true,
   infinite: true,
@@ -83,28 +132,28 @@ const HeroSection = () => {
           </div>
         </section>
       </div>
-      <div className="md:hidden w-full">
-        <div className="slider-container">
+      <div className="md:hidden ">
+        <div className="slider-container overflow-hidden">
           <Slider {...settings}>
             <div className="">
               <img
                 src="/scan/scan1.png"
                 alt="CT-scan"
-                className="h-[300px] w-full object-cover object-left "
+                className="h-[300px]  object-cover object-left "
               />
             </div>
             <div className="">
               <img
                 src="/scan/scan2.png"
                 alt="Xray-scan"
-                className="h-[300px] w-full object-cover object-left "
+                className="h-[300px]  object-cover object-left "
               />
             </div>
             <div>
               <img
                 src="/scan/scan3.png"
                 alt="Ultrasonic"
-                className="h-[300px] w-full object-cover object-left "
+                className="h-[300px]  object-cover object-left "
               />
             </div>
           </Slider>
@@ -115,6 +164,39 @@ const HeroSection = () => {
 
       <div id="about">
         <About />
+      </div>
+
+      <div>
+        <div className="py-10 px-4 md:px-10 bg-white">
+          <h2 className="text-3xl font-bold text-center text-blue-600 mb-8">
+            Our Core Services
+          </h2>
+          <Slider {...Coresettings}>
+            {services.map((service, index) => (
+              <div key={index} className="px-3">
+                <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-lg transition-all duration-300">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-full h-48 object-cover transform transition-transform duration-500 hover:scale-105 "
+                  />
+                  <div className="p-5 text-center">
+                    <h3 className="text-lg font-semibold">{service.title}</h3>
+                    <p className="text-teal-600 font-bold mt-2">
+                      Starting from {service.price}
+                    </p>
+                    <p className="text-gray-600 text-sm mt-2">
+                      {service.description}
+                    </p>
+                    <button className="mt-4 bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition">
+                      Know More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );
