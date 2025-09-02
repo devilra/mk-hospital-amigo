@@ -41,7 +41,11 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Link to="/">
-          <img src="/logo1.png" alt="RKP" className="h-20 w-[170px]" />
+          <img
+            src="/logo.webp"
+            alt="RKP"
+            className="h-[60px] w-[120px] object-cover rounded-full"
+          />
         </Link>
       </div>
 
@@ -52,7 +56,8 @@ const Navbar = () => {
             <button
               key={name}
               onClick={action}
-              className="md:text-lg cursor-pointer px-4 py-2 border-b-4 transition duration-500 text-blue-600 font-bold border-transparent hover:border-blue-600 bg-transparent">
+              className="md:text-lg cursor-pointer px-4 py-2 border-b-4 transition duration-500 text-blue-600 font-bold border-transparent hover:border-blue-600 bg-transparent"
+            >
               {name}
             </button>
           ) : (
@@ -65,7 +70,8 @@ const Navbar = () => {
                     ? "text-blue-600 font-bold border-blue-600"
                     : "text-blue-600 font-bold border-transparent hover:border-blue-600"
                 }`
-              }>
+              }
+            >
               {name}
             </NavLink>
           )
@@ -75,14 +81,15 @@ const Navbar = () => {
       {/* Call Button (Desktop) */}
       <div className="hidden md:block">
         <button className="bg-blue-900 text-white px-7 font-bold py-4 flex gap-2 justify-center items-center rounded-lg">
-          <IoCall size={20} className="text-white" /> 9384676002
+          <IoCall size={20} className="text-white" /> 9944455127
         </button>
       </div>
 
       {/* Mobile Menu Icon */}
       <div
         className="md:hidden text-2xl z-50"
-        onClick={() => setIsOpen(!isOpen)}>
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {isOpen ? <HiX /> : <HiMenu />}
       </div>
 
@@ -90,7 +97,8 @@ const Navbar = () => {
       <div
         className={`fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center gap-8 text-lg font-semibold text-blue-900 transform transition-transform duration-500 ease-in-out ${
           isOpen ? "translate-y-0" : "-translate-y-full"
-        } md:hidden z-40`}>
+        } md:hidden z-40`}
+      >
         {navLinks.map(({ name, path, action }) =>
           action ? (
             <button
@@ -99,7 +107,8 @@ const Navbar = () => {
                 action();
                 setIsOpen(false);
               }}
-              className="hover:text-blue-600">
+              className="hover:text-blue-600"
+            >
               {name}
             </button>
           ) : (
@@ -107,7 +116,8 @@ const Navbar = () => {
               to={path}
               key={name}
               onClick={() => setIsOpen(false)}
-              className="hover:text-blue-600">
+              className="hover:text-blue-600"
+            >
               {name}
             </NavLink>
           )

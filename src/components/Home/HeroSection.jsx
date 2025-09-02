@@ -6,25 +6,32 @@ import { useLocation } from "react-router-dom";
 
 const services = [
   {
-    title: "CT SCAN",
-    price: "₹ 2000",
+    title: "Orthopaedics",
+    // price: "₹ 2000",
     description:
-      "A CT scan (Computed Tomography) is an advanced imaging technique that uses X-rays and computer processing...",
-    img: "/services/s1.jpg",
+      "Orthopaedics focuses on the diagnosis, treatment, and prevention of disorders affecting bones, joints, muscles, ligaments, and tendons, ensuring mobility and musculoskeletal health.",
+    img: "/service/s1.jpg",
   },
   {
-    title: "LAB FOR BLOOD TESTS",
-    price: "₹ 50",
+    title: "Baby Fever Treatment",
+    //price: "₹ 50",
     description:
-      "A blood test is a diagnostic tool that analyzes a blood sample to assess overall health, detect diseases, and monitor...",
-    img: "/services/s2.jpg",
+      "Specialized care for infants with fever, ensuring safe diagnosis and gentle treatment for quick recovery.",
+    img: "/service/s2.jpg",
   },
   {
-    title: "ULTRA SOUND",
-    price: "₹ 1000",
+    title: "Surgery & Sutures",
+    //price: "₹ 1000",
     description:
-      "An ultrasound is a diagnostic tool that uses sound waves to create images of internal organs, helping assess...",
-    img: "/services/s3.jpg",
+      "Comprehensive surgical care with expert precision in procedures and suturing, ensuring safe recovery and minimal complications.",
+    img: "/service/s3.jpg",
+  },
+  {
+    title: "Obstetrics & Gynecology",
+    //price: "₹ 1000",
+    description:
+      "Expert care for women’s health, pregnancy, and childbirth with compassionate support and advanced treatments.",
+    img: "/service/s6.jpg",
   },
 ];
 
@@ -85,11 +92,11 @@ const HeroSection = () => {
     <div className="">
       <div className="hidden md:block">
         <section
-          className="relative  px-4 md:px-20 h-[800px] md:h-fit py-10 flex flex-col md:flex-row items-center justify-end gap-10 bg-cover bg-center bg-no-repeat"
+          className="relative rounded-br-[100px] border-b-[20px] border-blue-500 px-4 md:px-20 h-[800px]  md:h-fit py-10 flex flex-col md:flex-row items-center justify-end gap-10 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url('https://globalscans.in/wp-content/uploads/2025/04/CT-SCAN-1.png')",
-          }}>
+            backgroundImage: "url('/service/s9.jpg')",
+          }}
+        >
           {/* Left Content */}
 
           {/* Right Form */}
@@ -119,7 +126,8 @@ const HeroSection = () => {
               />
               <button
                 type="submit"
-                className="w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800">
+                className="w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800"
+              >
                 Submit
               </button>
             </form>
@@ -132,7 +140,7 @@ const HeroSection = () => {
           </div>
         </section>
       </div>
-      <div className="md:hidden ">
+      <div className="md:hidden hidden ">
         <div className="slider-container overflow-hidden">
           <Slider {...settings}>
             <div className="">
@@ -174,7 +182,7 @@ const HeroSection = () => {
           <Slider {...Coresettings}>
             {services.map((service, index) => (
               <div key={index} className="px-3">
-                <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div className="bg-white h-[450px] rounded-lg shadow-xl overflow-hidden hover:shadow-lg transition-all duration-300">
                   <img
                     src={service.img}
                     alt={service.title}

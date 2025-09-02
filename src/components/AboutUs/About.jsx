@@ -8,45 +8,53 @@ const About = () => {
           <div className="grid grid-cols-2 gap-6">
             <div className="bg-[#025277] text-white rounded-xl overflow-hidden shadow-md p-2 md:p-5">
               <img
-                src="/about/about1.png"
+                src="/service/s1.jpg"
                 alt="Home Collection"
                 className="w-full h-40 object-cover rounded-xl"
               />
               <div className="p-4 text-center ">
-                <p className="font-semibold">HOME COLLECTION</p>
-                <p className="text-sm text-white">Sampling At Your Address</p>
+                <p className="font-semibold">Orthopaedics</p>
+                <p className="text-sm text-white">
+                  Orthopaedics focuses on the diagnosis, treatment.
+                </p>
               </div>
             </div>
             {/* Card 2 */}
             <div className="bg-[#025277] text-white rounded-xl overflow-hidden shadow-md p-2 md:p-5">
               <img
-                src="/about/about2.png"
+                src="/service/s3.jpg"
                 alt="ECG Test"
                 className="w-full h-40 object-cover rounded-xl"
               />
               <div className="p-4 text-center">
-                <p className="font-semibold">ECG TEST</p>
-                <p className="text-sm text-white">Accurate Results</p>
+                <p className="font-semibold">Surgery & Sutures</p>
+                <p className="text-sm text-white">
+                  Comprehensive surgical care with expert precision in
+                  procedures and suturing.
+                </p>
               </div>
             </div>
             {/* Card 3 */}
             <div className="bg-[#025277] text-white rounded-xl overflow-hidden shadow-md p-2 md:p-5">
               <img
-                src="/about/about3.png"
+                src="/service/s6.jpg"
                 alt="100+ Tests"
                 className="w-full h-40 object-cover rounded-xl"
               />
               <div className="p-4 text-center">
-                <p className="font-semibold">100+ DIFFERENT TESTS</p>
-                <p className="text-sm text-white">Comprehensive Checkups</p>
+                <p className="font-semibold">Obstetrics & Gynecology</p>
+                <p className="text-sm text-white">
+                  Expert care for women’s health, pregnancy, and childbirth with
+                  compassionate.
+                </p>
               </div>
             </div>
             {/* Card 4 */}
             <div className="bg-[#025277] text-white rounded-xl overflow-hidden shadow-md p-2 md:p-5">
               <img
-                src="/about/about4.png"
+                src="/doctor/d1.jpg"
                 alt="Doctor"
-                className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-xl"
+                className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-xl  "
               />
               <div className="p-3 sm:p-4 text-center">
                 <p className="font-semibold text-sm sm:text-base">
@@ -59,24 +67,19 @@ const About = () => {
             </div>
           </div>
           <div>
-            <h4 className="text-cyan-700 font-semibold mb-2 text-sm sm:text-base">
+            {/* <h4 className="text-cyan-700 font-semibold mb-2 text-sm sm:text-base">
               About Us
-            </h4>
+            </h4> */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-4">
-              RKPhospitals in <br /> Nanmangalam, Chennai
+              DR.SathishClinic in <br /> Potheri, Kattankulathur, Chennai
             </h2>
-            <p className="text-gray-700 mb-4 text-sm sm:text-base">
-              We are{" "}
-              <span className="font-semibold">
-                RKPhospitals & Diagnostic Center
-              </span>
-              , a state-of-the-art medical facility providing accurate and
-              reliable diagnostic services.
+            <p className="  mb-4 text-sm md:text-3xl font-semibold sm:text-base">
+              Health is Wealth
             </p>
             <p className="text-gray-700 mb-6 text-sm sm:text-base">
-              Equipped with advanced imaging technology and a team of expert
-              professionals, we offer a wide range of tests including ECHO, CT
-              scan, ultrasound, X-ray, and laboratory diagnostics.
+              We don’t sell you medicines. We provide health care services which
+              makes you Heal both physically and mentally. Nourish your Body,
+              Mind and Soul.
             </p>
 
             <ul className="space-y-3 mb-6 text-sm sm:text-base">
