@@ -37,7 +37,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-4 md:px-20 py-4 bg-white shadow  z-50">
+    <nav className="flex items-center justify-between px-4 md:px-20 py-4 bg-gradient-to-r from-[#062332] via-[#0B3144] to-[#0D3346] shadow  z-50">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Link to="/">
@@ -50,13 +50,13 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Links */}
-      <ul className="hidden md:flex justify-between items-center gap-8 text-sm font-semibold text-blue-900">
+      <ul className="hidden md:flex justify-between items-center gap-8 text-sm font-semibold text-white">
         {navLinks.map(({ name, path, action }) =>
           action ? (
             <button
               key={name}
               onClick={action}
-              className="md:text-lg cursor-pointer px-4 py-2 border-b-4 transition duration-500 text-blue-600 font-bold border-transparent hover:border-blue-600 bg-transparent"
+              className="md:text-lg cursor-pointer px-4 py-2 border-b-4 transition duration-500 text-white font-bold border-transparent hover:border-white bg-transparent"
             >
               {name}
             </button>
@@ -65,10 +65,10 @@ const Navbar = () => {
               to={path}
               key={name}
               className={({ isActive }) =>
-                `md:text-lg cursor-pointer px-4 py-2 border-b-4 transition duration-500 ${
+                `md:text-lg cursor-pointer px-4 py-2 text-white border-b-4 transition duration-500 ${
                   isActive
-                    ? "text-blue-600 font-bold border-blue-600"
-                    : "text-blue-600 font-bold border-transparent hover:border-blue-600"
+                    ? "text-blue-600 font-bold border-white"
+                    : "text-blue-600 font-bold border-transparent hover:border-white"
                 }`
               }
             >

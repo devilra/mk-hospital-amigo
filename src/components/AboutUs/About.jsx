@@ -5,7 +5,7 @@ const About = () => {
     <div className="mt-5 md:mt-20">
       <section className="px-6 md:px-20 py-16 bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-[#025277] text-white rounded-xl overflow-hidden shadow-md p-2 md:p-5">
               <img
                 src="/service/s1.jpg"
