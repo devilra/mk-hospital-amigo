@@ -36,8 +36,10 @@ const Navbar = () => {
     { name: "Contact Us", path: "/contact" },
   ];
 
+  // from-[#062332] via-[#0B3144] to-[#0D3346]
+
   return (
-    <nav className="flex items-center justify-between px-4 md:px-20 py-4 bg-gradient-to-r from-[#062332] via-[#0B3144] to-[#0D3346] shadow  z-50">
+    <nav className="flex items-center justify-between px-4 md:px-20 py-4 bg-gradient-to-r from-[#041925] via-[#114f6d] to-[#08212e] shadow  z-50">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Link to="/">
